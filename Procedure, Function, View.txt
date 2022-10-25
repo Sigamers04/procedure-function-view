@@ -1,0 +1,26 @@
+1. PROCEDURE
+DELIMITER &&  
+CREATE PROCEDURE tampil_instagram()  
+BEGIN  
+    SELECT tbl_scraping.`ig_username`, tbl_scraping.`comment_count` 
+    FROM tbl_scraping;    
+END &&  
+DELIMITER ;
+
+CALL tampil_instagram()
+
+2. FUNCTION
+- (mohon maaf belum)
+
+
+
+
+
+3. VIEW
+
+CREATE VIEW persib AS
+SELECT ig_username, COUNT(ig_username) 
+AS follower FROM tbl_scraping 
+WHERE ig_username = "persib";
+
+SELECT * FROM PERSIB
